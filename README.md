@@ -160,11 +160,8 @@ paste file1.txt file2.txt > combined.txt
 ## **Shell Scripting Basics**:
 
 ## ***Writing a Simple Script***:
-1. ### ***Create a Script File:***
-  (#Creating and Executing a Script)
 
-
-3. ### ***Backup a Directory:***
+1. ### ***Backup a Directory:***
 
 ```
 #!/bin/bash
@@ -173,7 +170,7 @@ dest="/home/user/backup"
 cp -r $src $dest
 echo "Backup completed successfully!"
 ```
-3. ### **Variables**:
+2. ### **Variables**:
 
 ## Types of Variables 
 
@@ -214,7 +211,7 @@ $PWD # Present working directory.
 name="Navaal"
 echo "The name is $name"
 ```
-4. ## ***Loops***:
+3. ## ***Loops***:
 
 - ### *for Loop:*
 
@@ -234,7 +231,7 @@ do
   count=$((count + 1))
 done
 ```
-5. ## ***Conditional Statements***
+4. ## ***Conditional Statements***
 ```
 num=10
 if [ $num -gt 5 ]
