@@ -1,10 +1,8 @@
-![MEDS Digital Systems Logo]([https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2Fmeds-uet&psig=AOvVaw1NN3YNkw5y7wsOa1d8h2w2&ust=1745769746959000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOjx856J9owDFQAAAAAdAAAAABAE](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIgExQzqogNdKC7uojGWf0ulHKKUPSAJMB7w&s))
 <p align="center">
-  <img width="200" height="200" src="[https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2Fmeds-uet&psig=AOvVaw1NN3YNkw5y7wsOa1d8h2w2&ust=1745769746959000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOjx856J9owDFQAAAAAdAAAAABAE" alt="MEDS Digital Systems Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIgExQzqogNdKC7uojGWf0ulHKKUPSAJMB7w&s)">
-
+  <img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIgExQzqogNdKC7uojGWf0ulHKKUPSAJMB7w&s">
 </p>
 
-# MEDS Training Tutorial by Navaal Noshi
+# MEDS Training Tutorial By Navaal Noshi
 ###
 - [x] Shell Scripting
 - [x] Vim Commands
@@ -163,9 +161,10 @@ paste file1.txt file2.txt > combined.txt
 
 ## ***Writing a Simple Script***:
 1. ### ***Create a Script File:***
+   https://github.com/navaalnoshi/MEDS-Training/edit/main/README.md#L42
 
 
-2. ### ***Backup a Directory:***
+3. ### ***Backup a Directory:***
 
 ```
 #!/bin/bash
@@ -259,3 +258,7 @@ Syntax:
 ```
 Example: echo "Hello" # This prints Hello.
 ```
+
+
+
+
