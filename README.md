@@ -161,7 +161,7 @@ paste file1.txt file2.txt > combined.txt
 
 ## ***Writing a Simple Script***:
 1. ### ***Create a Script File:***
-   https://github.com/navaalnoshi/MEDS-Training/edit/main/README.md#L42
+  (#Creating and Executing a Script)
 
 
 3. ### ***Backup a Directory:***
