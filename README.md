@@ -1,3 +1,4 @@
+
 <p align="center">
   <img width="200" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIgExQzqogNdKC7uojGWf0ulHKKUPSAJMB7w&s">
 </p>
@@ -29,9 +30,9 @@ To view the different types of shells supported by your system, navigate to /etc
 ## *Check Supported Shells*:
 To see the shells supported by your system:
 
-1. **Open the terminal (e.g., press Ctrl + Alt + T in Ubuntu)**.
+1. ### **Open the terminal (e.g., press Ctrl + Alt + T in Ubuntu)**.
 
-2. **Run: `cat /etc/shells`**
+2. ### **Run: `cat /etc/shells`**
 
 To locate where Bash is installed, type:
 
@@ -41,34 +42,34 @@ which  bash
 
 # *Creating and Executing a Script*:
 
-1. **Navigate to a directory (e.g., `cd ~/Desktop`)**.
+1. ### **Navigate to a directory (e.g., `cd ~/Desktop`)**.
 
-2. **Create a new script file using the touch command:**
+2. ### **Create a new script file using the touch command:**
 ```
 touch hello.sh
 ```
 While the .sh extension isn't mandatory, it's a good practice for clarity.
 
-3. **Open the script in an editor (e.g., Visual Studio Code, gedit, Vim, Nano)**:
+3. ### **Open the script in an editor (e.g., Visual Studio Code, gedit, Vim, Nano)**:
 ```
 code hello.sh
 ```
-4. **Write the following script**:
+4. ### **Write the following script**:
  ```
  #!bash/bin/bash
  echo "Hello,Navaal!"
  ```
 The first line, #!/bin/bash, is the shebang. It tells the interpreter that this is a Bash script.
 
-5. **Save the file and close the editor.**
+5. ### **Save the file and close the editor.**
 
 
-6. **Make the script executable:**
+6. ### **Make the script executable:**
 
 ```
 chmod +x hello.sh
 ```
-7. **Execute the script**
+7. ### **Execute the script**
 
 ```
 ./hello.sh
@@ -160,8 +161,10 @@ paste file1.txt file2.txt > combined.txt
 ## **Shell Scripting Basics**:
 
 ## ***Writing a Simple Script***:
+1. ### ***Create a Script File:***
 
-1. ### ***Backup a Directory:***
+
+2. ### ***Backup a Directory:***
 
 ```
 #!/bin/bash
@@ -170,7 +173,7 @@ dest="/home/user/backup"
 cp -r $src $dest
 echo "Backup completed successfully!"
 ```
-2. ### **Variables**:
+3. ### **Variables**:
 
 ## Types of Variables 
 
@@ -211,7 +214,7 @@ $PWD # Present working directory.
 name="Navaal"
 echo "The name is $name"
 ```
-3. ## ***Loops***:
+4. ## ***Loops***:
 
 - ### *for Loop:*
 
@@ -231,7 +234,7 @@ do
   count=$((count + 1))
 done
 ```
-4. ## ***Conditional Statements***
+5. ## ***Conditional Statements***
 ```
 num=10
 if [ $num -gt 5 ]
@@ -255,6 +258,17 @@ Syntax:
 ```
 Example: echo "Hello" # This prints Hello.
 ```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
