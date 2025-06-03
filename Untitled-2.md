@@ -329,7 +329,7 @@ endmodule
   - **Propagation Delay (`t_pd`)**: Maximum time until the output *stabilizes* after an input change.
 
 <p align="center">
-  <img width="200" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image%208.png">
+  <img width="600" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image%208.png">
 </p>
 
   - **Glitches**: Unwanted transient outputs due to unequal path delays. Can often be ignored if steady-state correctness is guaranteed.
