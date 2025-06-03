@@ -342,7 +342,7 @@ endmodule
     - **Simple**: Manual input/output checks (prone to human error).
     - **Self-Checking**: Automated error detection (e.g., comparing outputs to expected values).
 <p align="center">
-  <img width="500" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image%209.pn">
+  <img width="500" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image%209.png">
 </p>
 
 - **Timing Verification**:
