@@ -8,7 +8,7 @@
 - **Objective**: Learn how modern computers work from the ground up (transistors → logic gates → microprocessors → accelerators).
 - **Scope**: Combines fundamentals (Boolean algebra, logic gates) with advanced topics (GPUs, systolic arrays, memory systems).
 <p align="center">
-  <img width="200" height="200" src="c:\Users\HH Traders\Desktop\image-1.png">
+  <img width="200" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image-1.png">
 </p>
 
 ## 2. **Computer Architecture Basics**
@@ -25,7 +25,7 @@
 - **CMOS Structure**: PMOS "pull-up" network + NMOS "pull-down" network to avoid short circuits.
 
 <p align="center">
-  <img width="200" height="200" src="c:\Users\HH Traders\Downloads\image 2.png">
+  <img width="200" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image%202.png">
 </p>
 
 ## 5. **Broader Context**
@@ -65,7 +65,7 @@
 - **Ripple-Carry Adder**: Chains 1-bit adders; slow due to sequential carry propagation.
 
 <p align="center">
-  <img width="200" height="200" src="c:\Users\HH Traders\Downloads\image 3.png">
+  <img width="200" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image%203.png">
 </p>
 
 - **Carry-Lookahead Adder**: Parallelizes carry computation for faster addition.
@@ -95,7 +95,7 @@
   - Controlled by function bits (e.g., `F2F1F0` for 8 operations).
 
   <p align="center">
-  <img width="200" height="200" src="c:\Users\HH Traders\Downloads\image 4.png">
+  <img width="200" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image%204.png">
 </p>
 
 - **Tri-State Buffers**:
@@ -103,7 +103,7 @@
   - Used for shared buses (e.g., CPU-memory communication).
 
   <p align="center">
-  <img width="200" height="200" src="c:\Users\HH Traders\Downloads\image 5.png">
+  <img width="200" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image%205.png">
 </p>
 
 ## 3. **Memory Design**
@@ -189,7 +189,7 @@
 | Timing         | Outputs sync with clock | Outputs can change between clocks |
 ## 5. **FPGA Design Flow**
 <p align="center">
-  <img width="200" height="200" src="c:\Users\HH Traders\Downloads\image 6.png">
+  <img width="200" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image%206.png">
 </p>
 
 
@@ -324,71 +324,50 @@ endmodule
   - Transistor switching time, parasitic capacitance/resistance (*RC* delays), wire delays, temperature/voltage variations, and aging.
   - Different input patterns can lead to different propagation delays (e.g., pull-up vs. pull-down networks in CMOS).
 
-- **Timing Metrics**:
+- **Timing**:
   - **Contamination Delay (`t_cd`)**: Minimum time until the output *starts* changing after an input change.
   - **Propagation Delay (`t_pd`)**: Maximum time until the output *stabilizes* after an input change.
 
 <p align="center">
-  <img width="200" height="200" src="c:\Users\HH Traders\Downloads\image 8.png">
+  <img width="200" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image%208.png">
 </p>
 
   - **Glitches**: Unwanted transient outputs due to unequal path delays. Can often be ignored if steady-state correctness is guaranteed.
 
 <p align="center">
-  <img width="200" height="200" src="c:\Users\HH Traders\Downloads\image 7.png">
+  <img width="200" height="200" src="https://github.com/navaalnoshi/MEDS-Training/blob/main/png/image%207.png">
 </p>
-
 
 - **Design Implications**:
   - Critical path (longest delay) determines the maximum operating frequency.
   - Tools automate delay calculations, but manual analysis is needed for corner cases.
-
----
-
 ## 2. Sequential Circuit Timing
 - **Flip-Flop Timing Constraints**:
   - **Setup Time (`t_setup`)**: Input must be stable *before* the clock edge.
   - **Hold Time (`t_hold`)**: Input must remain stable *after* the clock edge.
   - **Clock-to-Q Delay (`t_ccq`, `t_pcq`)**: Time for the output to start/fully stabilize after the clock edge.
-
 - **Clock Skew**:
   - Difference in clock arrival times at different flip-flops.
   - **Worst-Case Impact**:
     - Increases effective `t_setup` (if clock arrives earlier at the next FF).
     - Increases effective `t_hold` (if clock arrives later at the next FF).
   - **Solution**: Minimize skew via balanced clock tree synthesis (e.g., H-tree networks).
-
-- **Sequencing Overhead**:
-  - Time wasted per cycle due to FF timing (`t_pcq + t_setup`). Limits useful work (combinational logic delay).
-
----
-
 ## 3. Timing Violations & Fixes
 - **Setup Violation**:
   - **Cause**: Combinational logic too slow → output not ready by `t_setup`.
   - **Fix**: Reduce clock frequency, optimize critical path (logic simplification, pipelining), or improve synthesis constraints.
-
 - **Hold Violation**:
   - **Cause**: Combinational logic too fast → output changes before `t_hold`.
   - **Fix**: Add buffers to delay signals (no effect on `t_setup`).
-
----
-
 ## 4. Verification
 - **Functional Verification**:
   - **Test Benches**:
     - **Simple**: Manual input/output checks (prone to human error).
     - **Self-Checking**: Automated error detection (e.g., comparing outputs to expected values).
-    - **Golden Model**: Compare against a reference design (high-level, bug-free).
-  - **Coverage**: Aim for high input-space coverage (but exhaustive testing is impractical for large designs).
-
 - **Timing Verification**:
   - **Simulation**: Annotate delays in HDL (e.g., `#10ns`).
   - **Static Timing Analysis (STA)**: Tools report critical paths and violations.
   - **Post-Synthesis**: Gate-level simulations with real timing data from cell libraries.
-
----
-
 ## 5. Design Principles
 1. **Critical Path Optimization**: Minimize the longest combinational delay to maximize clock frequency.
 2. **Balanced Design**: Equalize delays across paths to avoid bottlenecks.
