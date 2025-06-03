@@ -13,7 +13,6 @@
 - [ ] Verilator
 - [ ] GTKWave
  
-
 # **What is shell?**
 
 A shell script is a computer program designed to be run by the Unix shell, a command-line interpreter. The various dialects of shell scripts are considered to be scripting languages. A shell usually interprets a single line of input, but we can also create a file containing a number of lines of commands to be interpreted. This file is a program known as a shell script. The program can also contain control structures (if-then, loops). Shell scripts allow a sequence of commands to be executed automatically
